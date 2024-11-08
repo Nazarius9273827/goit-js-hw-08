@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+li {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+}
+.done {
+    text-decoration: line-through;
+    color: grey;
+}
+.task-input {
+    width: calc(100% - 60px);
+}
+
+.bookmark {
+    flex-grow: 1;
+}
+.edit, .delete {
+    margin-left: 10px;
+    cursor: pointer;
+}
+.edit:hover, .delete:hover {
+    text-decoration: underline;
+}
+input, button {
+    margin: 5px;
+}

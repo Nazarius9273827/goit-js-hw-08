@@ -9,9 +9,57 @@
 </head>
 
 <body>
+    <div class="container">
+        <h1>Список задач</h1>
+
+        <input type="text" id="taskInput" class="task-input" placeholder="Нова задача...">
+        <button onclick="addTask()">Додати</button>
+        
+        <ul id="taskList"></ul>
+
+    <h2>Форма збереження даних</h2>
+    <form id="dataForm">
+        <label>
+            Ім'я:
+            <input type="text" id="name" />
+        </label>
+        <br>
+        <label>
+            Електронна адреса:
+            <input type="email" id="email" />
+        </label>
+        <br>
+        <button type="button" id="saveBtn">Зберегти</button>
+    </form>
+
+    <h1>Закладки</h1>
+
+<input type="text" id="bookmarkName" placeholder="Назва сайту" />
+<input type="url" id="bookmarkUrl" placeholder="URL сайту" />
+<button onclick="addBookmark()">Додати закладку</button>
+
+<ul id="bookmarkList"></ul>
+
+<h1>Контакти</h1>
+
+<form id="contactForm">
+    <input type="text" id="firstName" placeholder="Ім'я" required />
+    <input type="text" id="lastName" placeholder="Прізвище" required />
+    <input type="tel" id="phone" placeholder="Телефон" required />
+    <input type="email" id="email" placeholder="Електронна адреса" required />
+    <button type="submit">Додати контакт</button>
+</form>
+
+<h2>Список контактів</h2>
+<ul id="contactList"></ul>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"
         integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./task-9_1.js"></script>
+    <script type="module" src="./task-9_2.js"></script>
+    <script src="./task-9_3.js"></script>
+    <script type="module" src="./task-9_4.js"></script>
 </body>
 
 </html>
