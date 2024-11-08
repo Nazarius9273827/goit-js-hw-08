@@ -1,0 +1,12 @@
+.timer {
+    display: flex;
+    gap: 50px;
+}
+
+h1,
+.value,
+.label {
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
