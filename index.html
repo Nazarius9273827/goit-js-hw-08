@@ -9,9 +9,19 @@
 </head>
 
 <body>
+    <h1>Лінійне завантаження зображень</h1>
+    <button onclick="loadImages()">Завантажити зображення</button>
+
+    <div class="image-container">
+        <img data-src="https://example.com/image1-highres.jpg" alt="Image 1" class="lazyload">
+        <img data-src="https://example.com/image2-highres.jpg" alt="Image 2" class="lazyload">
+        <img data-src="https://example.com/image3-highres.jpg" alt="Image 3" class="lazyload">
+    </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"
         integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script type="module" src="./task_3.js"></script>
 </body>
 
 </html>
