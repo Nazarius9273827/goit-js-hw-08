@@ -1,19 +1,21 @@
-function debounce(func, delay) {
-    let timeout;
-    return function (...args) {
-        clearTimeout(timeout);
-        timeout = setTimeout(() => func.apply(this, args), delay);
+const debounce = _.debounce;
+
+document.addEventListener("DOMContentLoaded", () => {
+    const sliderInput = document.querySelector(".slider__input");
+    const sliderImage = document.querySelector(".slider__image");
+  
+    const resizeImage = (value) => {
+      const size = 100 + value * 3;
+      sliderImage.style.width = `${size}px`;
+      sliderImage.style.height = `${size}px`;
     };
-}
-
-function resizeImage(event) {
-    const sliderValue = event.target.value;
-    const image = document.querySelector('.slider__image');
-
-    image.style.width = `${sliderValue}%`;
-}
-
-const debouncedResizeImage = debounce(resizeImage, 300);
-
-
-document.querySelector('.slider__input').addEventListener('input', debouncedResizeImage);
+  
+    const debouncedResizeImage = debounce((value) => {
+      resizeImage(value);
+    }, 100);
+  
+    sliderInput.addEventListener("input", (event) => {
+      const value = event.target.value;
+      debouncedResizeImage(value);
+    });
+  });
